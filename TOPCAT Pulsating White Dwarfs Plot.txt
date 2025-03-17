@@ -1,0 +1,63 @@
+topcat -stilts plot2plane \
+   xpix=600 ypix=319 \
+   yflip=true xlabel=bp-g ylabel=abs_G_mag grid=true \
+   xmin=-0.6 xmax=1 ymin=5 ymax=20 \
+   title='Color-Magnitude Diagram of White Dwarfs and Pulsating White Dwarfs (close view)' \
+    legend=true \
+   layer_01=Mark \
+      in_01='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\PulsatingWhiteDwarfsTypeForTOPCAT.csv' \
+       ifmt_01=CSV \
+      x_01=bp_g_V777_Her y_01=abs_G_V777_Her \
+      shading_01=auto shape_01=open_diamond size_01=2 color_01=0000ff \
+   layer_02=Mark \
+      in_02='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\vizier_votable.vot' \
+       icmd_02='select <subset>' \
+      x_02='BPmag - Gmag' y_02='Gmag + 5*log10(Plx/1000) + 5' \
+      shading_02=density color_02=light_grey \
+      leglabel_02='6: subset' \
+   layer_03=Mark \
+      in_03='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\Dr.Rimoldini Pulsating White Dwarfs Data\V777Her.vot' \
+      x_03='phot_bp_mean_mag - phot_g_mean_mag' \
+       y_03='phot_g_mean_mag + 5*log10(parallax/1000) + 5' \
+      shading_03=auto color_03=blue \
+      leglabel_03='V777 Her' \
+   layer_04=Mark \
+      in_04='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\Dr.Rimoldini Pulsating White Dwarfs Data\GWVir.vot' \
+      x_04='phot_bp_mean_mag - phot_g_mean_mag' \
+       y_04='phot_g_mean_mag + 5*log10(parallax/1000) + 5' \
+      shading_04=auto \
+      leglabel_04='GW Vir' \
+   layer_05=Mark \
+      in_05='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\PulsatingWhiteDwarfsTypeForTOPCAT.csv' \
+       ifmt_05=CSV \
+      x_05=bp_g_ZZ_Cet y_05=abs_G_ZZ_Cet \
+      shading_05=auto shape_05=open_diamond size_05=2 color_05=yellow \
+   layer_06=Mark \
+      in_06='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\Dr.Rimoldini Pulsating White Dwarfs Data\ZZCet.vot' \
+      x_06='phot_bp_mean_mag - phot_g_mean_mag' \
+       y_06='phot_g_mean_mag + 5*log10(parallax/1000) + 5' \
+      shading_06=auto color_06=yellow \
+      leglabel_06='ZZ Cet' \
+   layer_07=Mark \
+      in_07='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\PulsatingWhiteDwarfsTypeForTOPCAT.csv' \
+       ifmt_07=CSV \
+      x_07=bp_g_Hot_DAV y_07=abs_G_Hot_DAV \
+      shading_07=auto shape_07=open_diamond size_07=2 color_07=cyan \
+      leglabel_07='Hot DAV' \
+   layer_08=Mark \
+      in_08='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\PulsatingWhiteDwarfsTypeForTOPCAT.csv' \
+       ifmt_08=CSV \
+      x_08=bp_g_ELM_DAV y_08=abs_G_ELM_DAV \
+      shading_08=auto shape_08=open_diamond size_08=2 color_08=magenta \
+      leglabel_08='ELM DAV' \
+   layer_09=Mark \
+      in_09='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\PulsatingWhiteDwarfsTypeForTOPCAT.csv' \
+       ifmt_09=CSV \
+      x_09=bp_g_GW_Vir y_09=abs_G_GW_Vir \
+      shading_09=auto shape_09=open_diamond size_09=2 \
+   layer_10=Mark \
+      in_10='C:\Thinh Nguyen files\Villanova University\Summer Research 2020 Switzerland\PulsatingWhiteDwarfsTypeForTOPCAT.csv' \
+       ifmt_10=CSV \
+      x_10=bp_g_Hot_DQV y_10=abs_G_Hot_DQV \
+      shading_10=auto shape_10=open_diamond size_10=2 color_10=pink \
+   legseq=_02,_03,_04,_06,_07,_08 
